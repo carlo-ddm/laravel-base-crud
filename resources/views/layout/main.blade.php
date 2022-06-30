@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <title>laravel-base-crud</title>
 </head>
 <body>
@@ -11,6 +12,7 @@
 Creare il seeder per la tabella comics utilizzando il file in allegato.
 Creare la pagina index e la pagina show
 BONUS: impostare la pagina create contenete il form per inviare i dati in POST allo store --}}
-    @yield('content')
+@include('partials.header')
+@yield('content')
 </body>
 </html>
