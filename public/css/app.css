@@ -12149,3 +12149,12 @@ fieldset:disabled .btn {
   }
 }
 
+.cdd-container {
+  width: 80%;
+}
+
+.cdd-container .cdd-card {
+  width: 500px;
+  height: 800px;
+}
+

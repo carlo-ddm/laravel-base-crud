@@ -18,10 +18,10 @@
             <tr>
                 <th scope="row">{{$comic->id}}</th>
                 <td>{{$comic->title}}</td>
-                <td>{{$comic->image}}</td>
+                <td><img src="{{$comic->image}}" alt="{{$comic->title}}"></td>
                 <td>{{$comic->type}}</td>
                 <td>
-                    <a class="btn-primary" href="">SHOW</a>
+                    <a class="btn-primary" href="{{route('comics.show', $comic)}}">SHOW</a>
                     <a class="btn-success" href="">EDIT</a>
                 </td>
             </tr>
