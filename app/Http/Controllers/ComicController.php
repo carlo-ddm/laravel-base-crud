@@ -44,7 +44,7 @@ class ComicController extends Controller
         $new_comic->fill($data);
         $new_comic->save();
         // NON FUNZIONE LA ROTTA SHOW_____________________________________
-        return redirect()->route('comics.index', compact('new_comic'));
+        return redirect()->route('comics.show', $new_comic);
     }
 
     /**
