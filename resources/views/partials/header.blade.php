@@ -7,6 +7,9 @@
             <li class="nav-item">
               <a class="nav-link" href="{{route('comics.index')}}">Comics</a>
             </li>
-          </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('comics.create')}}">Crea</a>
+            </li>
+        </ul>
     </div>
 </header>

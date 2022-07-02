@@ -21,8 +21,13 @@
                 <td><img src="{{$comic->image}}" alt="{{$comic->title}}"></td>
                 <td>{{$comic->type}}</td>
                 <td>
-                    <a class="btn-primary" href="{{route('comics.show', $comic)}}">SHOW</a>
-                    <a class="btn-success" href="">EDIT</a>
+                    <a class="btn btn-primary" href="{{route('comics.show', $comic)}}">SHOW</a>
+                    <a class="btn btn-success" href="{{route('comics.edit', $comic)}}">EDIT</a>
+                    <form action="{{route('comics.destroy', $comic)}}" method="POST">
+                        @method('DELETE')
+                        @csrf
+                        <button type="submit" class="btn btn-danger">DELETE</button>
+                    </form>
                 </td>
             </tr>
             @endforeach
