@@ -95,6 +95,23 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        $request->validate([
+            'title' => 'required|min:3|max:50',
+            'image' => 'required|min:10|max:255',
+            'type' => 'required|min:3|max:50'
+        ],
+        [
+            'title.required'  => 'Campo obbligatorio',
+            'title.min'  => 'Il titolo deve avere almeno :min caratteri',
+            'title.max'  => 'Il titolo non può superare i :max caratteri',
+            'image.required'  => 'Campo obbligatorio',
+            'image.min'  => 'L\'URL deve avere almeno :min caratteri',
+            'image.max'  => 'L\'URL non può superare i :max caratteri',
+            'type.required'  => 'Campo obbligatorio',
+            'type.min'  => 'La categoria deve avere almeno :min caratteri',
+            'type.max'  => 'La categoria non può superare i :max caratteri',
+        ]);
+
         $data = $request->all();
         $comic->update($data);
         return redirect()->route('comics.show', compact('comic'));
