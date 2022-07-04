@@ -1,2 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
-@import 'partials/show'
+@import 'partials/show';
+
+.error-msg {
+    color: red;
+    font-size: .8rem;
+}
